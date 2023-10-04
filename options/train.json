@@ -1,0 +1,69 @@
+{
+    "task": "BoDiffusion", 
+    "model": "BoDiffusion_DiT",
+    "gpu_ids": "0", //For multigpu use comma as separation
+    "path": {
+      "root": "results",             
+      "resume_checkpoint": ""        // path of pretrained model (modelxxxxx.pt)
+    },
+    "support_dir": "support_data/",
+    "datasets": {
+      "train": {
+        "name": "train_dataset",          
+        "dataset_type": "amass",         
+        "dataroot": "./data_fps60",// path of training dataset
+        "dataloader_shuffle": true,
+        "dataloader_num_workers": 16,
+        "dataloader_batch_size": 512,     // batch size per gpu
+        "dataloader_microbatch": -1,      // if necessary 
+        "cond_window_size": 41,  // conditioning window size
+        "window_size": 41,
+        "phase": "train"
+      }
+    },
+    "ddpm": {
+      "image_size": [22],
+      "in_channels": 24,
+      "out_channels": 6,
+      "num_channels": 384, 
+      "num_heads": 6,
+      "num_layers": 12,
+      "attention_resolutions": [32, 16, 8],
+      "channel_mult": [1, 1, 2], 
+      "dropout": 0.1,
+      "class_cond": false,
+      "joint_cond": false,
+      "joint_cond_L": false,
+      "in_dim": [3],
+      "add_cond": true,
+      "batch_size": 41,
+      "mlp_ratio": 1.0
+    },
+    "diffusion": {
+      "learn_sigma": true,
+      "diffusion_steps": 1000,
+      "noise_schedule": "linear",
+      "timestep_respacing": "",
+      "use_kl": false,
+      "predict_xstart": false,
+      "rescale_timesteps": false,
+      "rescale_learned_sigmas": false
+    },
+  
+    "train": {
+      "lr": 1e-5,
+      "weight_decay": 0.0,
+      "lr_anneal_steps": 0,
+      "ema_rate": 0.9999,
+      "schedule_sampler": "uniform",
+      "log_interval": 10,
+      "save_interval": 10000
+    },
+  
+    "fp16": {
+      "use_fp16": false,
+      "fp16_scale_growth": 1e-3
+    }
+  }
+    
+  

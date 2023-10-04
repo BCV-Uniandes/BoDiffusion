@@ -1,0 +1,17 @@
+support_data/**/*
+results*
+*.pkl
+*fps60*
+**/__pycache__
+AMASS*
+posebert/*
+**/*npz
+model_zoo/*
+wandb/*
+**/*.tar*
+**/*.pt*
+tb_*/**
+*.jpg
+.vsco*
+vis/*
+DEBUG*
