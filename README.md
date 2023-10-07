@@ -11,8 +11,9 @@ This is the official implementation of the paper: BoDiffusion: Diffusing Sparse 
 <sup>3 </sup>Meta AI. <br/>
 <br/>
 
-![](./videos/BoDiffusion_final1.mp4)
-
+<p align="center">
+<img src="videos/BoDiffusion_final1.gif" width="800">
+</p>
 ## Dependencies and Installation
 
 - Python >= 3.7 (Recommend to use [Anaconda](https://www.anaconda.com/download/#linux))
@@ -45,6 +46,7 @@ This is the official implementation of the paper: BoDiffusion: Diffusing Sparse 
     python train.py
     ```
 
+- **Pre-trained SR model**: Find the pre-trained SR model at [Drive](https://drive.google.com/drive/folders/15xfdNnxDykOVuYmTeiweSJyEIJnfn5mY?usp=sharing).
 
 ## Citations
 
