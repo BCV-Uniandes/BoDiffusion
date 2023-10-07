@@ -14,6 +14,7 @@ This is the official implementation of the paper: BoDiffusion: Diffusing Sparse 
 <p align="center">
 <img src="videos/BoDiffusion_final1.gif" width="800">
 </p>
+
 ## Dependencies and Installation
 
 - Python >= 3.7 (Recommend to use [Anaconda](https://www.anaconda.com/download/#linux))
